@@ -19,10 +19,23 @@ $.ajax({
   success: function(data) {
     var $source = $('#maori').text(data.source);
     var $translation = $('#english').text(data.translation);
-    console.log(data);
+  twitterShare();
   },
   type: 'GET'
 })
+
+function twitterShare() {
+  var maori = document.getElementById("maori").textContent;
+  var english = document.getElementById("english").textContent;
+  var quote = maori + " " + english;
+  console.log(quote);
+  console.log(url);
+  var url = document.getElementById("twitter-link").setAttribute("href", "https://twitter.com/intent/tweet?text=" + quote);
+}
+
+
+
+
 
 
 });
