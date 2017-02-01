@@ -30,7 +30,7 @@ function twitterShare() {
   var quote = maori + " " + english;
   console.log(quote);
   console.log(url);
-  var url = document.getElementById("twitter-link").setAttribute("href", "https://twitter.com/intent/tweet?text=" + quote);
+  var url = document.getElementById("twitter-link").setAttribute("href", "https://twitter.com/intent/tweet?text=" + encodeURIComponent(quote));
 }
 
 
